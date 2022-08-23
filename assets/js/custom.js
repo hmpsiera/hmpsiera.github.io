@@ -73,8 +73,10 @@
 
 
 	(function init() {
-	  function getTimeRemaining(endtime) {
-	    var t = Date.parse(endtime) - Date.parse(new Date());
+	  function getTimeRemaining() {
+		var tanggalTujuan = new Date('Sep 19, 2022 09:00:00').getTime();
+		var sekarang = new Date().getTime();
+	    var t = tanggalTujuan - sekarang;
 	    var seconds = Math.floor((t / 1000) % 60);
 	    var minutes = Math.floor((t / 1000 / 60) % 60);
 	    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
